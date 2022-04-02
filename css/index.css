@@ -130,12 +130,11 @@ body{
 }                
 .container2 .card2{
     text-indent: -9999px;
-    width:15px;
+    width: 15px;
     height: 500px;
     position: fixed; 
     right:0; 
     text-align: center; 
-    padding:10px 5px 15px;/*内边框大小*/
     box-shadow: 20px 20px 50px rgba(0,0,0,0.5);/*下拉阴影*/
     border-radius: 15px;/*圆角*/
     background-color:rgba(255,255,255,0.5);
@@ -150,7 +149,6 @@ body{
     width: 500px;
     height: 750px;
     justify-items: end;
-    margin:1em;/*外边框大小）*/
     padding:10px 5px 15px;/*内边框大小*/
     box-shadow: 20px 20px 50px rgba(0,0,0,0.5);/*下拉阴影*/
     border-radius: 15px;/*圆角*/

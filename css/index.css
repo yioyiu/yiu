@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 #web-bg{
     position: fixed;                /*绝对位置*/
@@ -17,16 +18,16 @@ body{
     display: flex;/*生成一个flex的框*/
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
 }
 .container{
-    position: relative;     /*相对位置*/
-    display: flex;
+    position: absolute;     /*相对位置*/
     justify-content: center;/*在主轴（横轴）方向上居中对齐*/
     align-items: center;    /*在纵轴方向居中对齐*/
-    max-width: 1200px;      /*最大宽度*/
+    top: 20%;
+    display: flex;
     flex-wrap: wrap;        /*灵活的项目在必要的时候拆行或拆列*/
     z-index:0;             /*图层上移一层*/
+    
 }                
 .container .card{
     position: relative;
@@ -44,18 +45,25 @@ body{
     border-top: rgba(255,255,255,0.5) 1px solid;/*设置上边框属性*/
     border-left: rgba(255,255,255,0.5) 1px solid;/*设置左边框属性*/
     backdrop-filter: blur(3px);/*背景透明模糊*/
+    
 }
 
-/* 大头图片 */
+/* 小人图片 */
 .container .pic{
     position:absolute;
     top: -140px;
 }
 
+/* 个人logo */
+.logo{
+    position:absolute;
+    top: 50px;
+    left: 150px;
+}
+
 .container .card .content{
     color: white;
     padding: 20px 10px 20px 10px;
-    text-align: center;
 }
 
 .container .card .content h1{
@@ -65,56 +73,65 @@ body{
     font-size: 10.5em;
     color: rgba(255,255,255,0.3);
     pointer-events: none;
-    z-index: 0;
 }
+
+
 .container .card .content h2{
-    position:absolute;
     font-size: 3em;
-    top: 10px;
-    left: 55px;
-}
-.container .card .content h3{
-    font-size: 1.6em;
     font-weight: 400;
-    position: absolute;
-    top: 50px;
-    left: 35px;
+    text-align: center;
     transition: 0.5s;
-    transform: translateY(50px);
+    transform: translateY(160px);
     opacity: 1;/*透明程度*/
 }
 /*hover：鼠标放上去后发生以下事情*/
-.container .card:hover .content h3{
+.container .card:hover .content h2{
     transform: translateY(0px);
     opacity: 0;/*透明*/
 }
-.container .card .content a{
+
+
+
+
+.container .card .content h3{
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 400;
+    justify-content: center;
+    text-align: center;
+    transition: 0.5s;
+    transform: translateY(50px);
+    opacity: 0;/*不透明*/
+}
+/*hover：鼠标放上去后发生以下事情*/
+.container .card:hover .content h3{
+    transform: translateY(-25px);
+    opacity: 1;/*透明*/
+}
+.button{
+    position:absolute;
+    justify-content: center;/*在主轴（横轴）方向上居中对齐*/
+    align-items: center;    /*在纵轴方向居中对齐*/
+    bottom:10%;
+}
+.button a{
     /* 文字上下居中 */
     line-height: 30px;
     /* 文字左右居中 */
     text-align: center;
-    position: absolute;
-    left: 50px;
-    top: 160px;
     width: 200px;
     height: 50px;
-    bottom: 20px;
     display: inline-block;/*狂内行*/
     color: rgb(0, 0, 0);
-    text-decoration: none;/*文本装饰*/
-    font-weight: 900px;
+    text-decoration:solid;/*文本装饰*/
     border-radius: 25px;
-    background-color:whitesmoke;
+    background-color:rgba(255,255,255,0.3);
     padding: 8px 20px ;
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
     transition: 0.5s;
     transform: translateY(50px);
-    opacity: 0;
 }
-.container .card:hover .content a{
-    transform: translateY(0px);
-    opacity: 1;
-}
+
 
 
 
@@ -123,13 +140,13 @@ body{
 .container2{
     position: absolute;     /*相对位置*/
     display: flex;
+    top: 50%;
     justify-content:right;/*在主轴（横轴）方向上右对齐*/
     align-items: center;    /*在纵轴方向居中对齐*/
     flex-wrap: wrap;        /*灵活的项目在必要的时候拆行或拆列*/
-    z-index: 0;             /*图层上移一层*/
+    z-index: 2;
 }                
 .container2 .card2{
-    text-indent: -9999px;
     width: 15px;
     height: 500px;
     position: fixed; 
@@ -140,12 +157,11 @@ body{
     background-color:rgba(255,255,255,0.5);
     overflow:hidden;/*内容溢出卡片会怎样*/
 }
-.container2:hover .card2{
+.container2 .card2 .content2{
+    opacity: 0;
+}
+.container2 .card2:hover{
     border:1px solid #000000;
-    word-wrap:break-word;
-    /* 文字自动换行 */
-    text-indent: 0%;
-    /* 文字可见 */
     width: 500px;
     height: 750px;
     justify-items: end;
@@ -159,10 +175,14 @@ body{
     border-top: rgba(255,255,255,0.5) 1px solid;/*设置上边框属性*/
     border-left: rgba(255,255,255,0.5) 1px solid;/*设置左边框属性*/
     backdrop-filter: blur(3px);/*背景透明模糊*/
+    transition: 0.15s;
 }
-.container2 .card2 .content2{
-    width: 400px;
-    height: 750px;
-    text-align: center;
-    justify-items: center;
+
+.container2 .card2:hover .content2{
+    color: white;
+    opacity: 1;
+}
+.container2 .card2:hover .content2 h1{
+    font-size: large;
+    margin-bottom: 25px;
 }

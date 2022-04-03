@@ -23,28 +23,23 @@
     <div class="wrapper">
         <div id="web-bg" style="background-size: 100%;background-size:cover;background-image: url(https://w.wallhaven.cc/full/e7/wallhaven-e7ek7k.jpg);filter:brightness(0.9);"></div>
                             <!-- 个人logo -->
-        <span>
-            <img class="logo" src="images\personal-logo.png" width="50px" height="50px" alt="我的个人logo">
-        </span>
     </div>
                                 <!-- 卡片 -->
     <div class="container">
-                            <!-- 小人 -->
-        <img class="pic" src="images\humen.png" width="800px" height="610px"  alt="我的帅照">
         <div class="card">
             <div class="content">
                 <h1>
                     ZyuY
                 </h1>
                 <h2>
-                    Yio&Yiu
+                    周玉耀
                 </h2>
                 <h3>
                     Ngor giu zou<br>
-                    Zhou Yio Yiu
+                    <strong>Zhou Yio Yiu</strong>
                 </h3>
                 <h3>
-                    在<strong>嗓嘿</strong>流浪的<strong>广东银</strong>
+                    在嗓嘿流浪的广东银
                 </h3>
                 <h3>
                     管院本科小小书生
@@ -69,17 +64,20 @@
             </div>
         </div>
     </div>
-                                <!-- 按钮 -->
-    <div class="button">
-        <a href="https://zyuy.mysxl.cn/">
-        \/
-        </a>
-    </div>
+
                                 <!-- 卡片2 -->
     <div class="container2">
         <div class="card2">
-            <div class="content2">
-                
+            <div class="guide">
+                <div class="me">
+                    我
+                </div>
+                <div class="masterpiece">
+                    小作品
+                </div>
+                <div class="contact">
+                    找我啥事
+                </div>
             </div>
         </div>
     </div>
@@ -90,11 +88,12 @@
 <!-- 浮动js -->
 <script type="text/javascript" src="js\Floating card.js"></script>
 <script type="text/javascript">
-	VanillaTilt.init(document.querySelectorAll(".pic"), {
-		max: 40,
-		speed: 400,
-        glare: false,
-        "max-glare": 1,
+	VanillaTilt.init(document.querySelectorAll(".card"), {
+        reverse: true,
+		max: 15,
+		speed: 250,
+        glare: true,
+        "max-glare": 0.2,
 	});
 </script>
 

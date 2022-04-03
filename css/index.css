@@ -150,11 +150,14 @@ body{
 }
 .container2 .card2:hover .guide{
     opacity: 1;
-    color: white;
     font-weight: 300;
     text-align: center;
     width: 100%;
     height: 100%;
+}
+.container2 .card2 .guide a{
+    color: white;
+    text-decoration:none
 }
 .me{
     border:1px solid #a4a4a442;

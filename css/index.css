@@ -4,21 +4,100 @@
     box-sizing: border-box;
     
 }
-#web-bg{
-    position: fixed;                /*绝对位置*/
-    top: 0px;                         /*最上*/
-    left: 0px;                        /*最左*/
-    width: 100%;                    /*左右充满*/
-    height: 100%;                   /*上下充满*/
-    z-index: -10;                   /*图层最底*/
-}
 
 
 body{
     display: flex;/*生成一个flex的框*/
     justify-content: center;
     align-items: center;
+    background-color: rgb(162, 59, 59);
+    background-image: 
+    radial-gradient(closest-side,rgb(255, 60, 60,1),rgba(235,205,78,0)),
+    radial-gradient(closest-side,rgb(143, 255, 151,1),rgba(235,205,78,0)),
+    radial-gradient(closest-side,rgb(135, 253, 247,1),rgba(235,205,78,0)),
+    radial-gradient(closest-side,rgb(135, 99, 255),rgba(235,205,78,0)),
+    radial-gradient(closest-side,rgb(255, 148, 148,1),rgba(235,205,78,0));
+    background-size:
+    130vmax 130vmax,
+    80vmax 80vmax,
+    90vmax 90vmax,
+    110vmax 110vmax,
+    90vmax 90vmax;
+    background-position:
+    -80vmax -80vmax,
+    60vmax -30vmax,
+    10vmax 10vmax,
+    -30vmax -10vmax,
+    50vmax 50vmax;
+    background-repeat: no-repeat;
+    animation: 15s bgmove linear infinite;
 }
+
+
+@keyframes bgmove{
+    0%,100%{
+        background-size:
+        130vmax 130vmax,
+        80vmax 80vmax,
+        90vmax 90vmax,
+        110vmax 110vmax,
+        90vmax 90vmax;
+    background-position:
+        -80vmax -80vmax,
+        60vmax -30vmax,
+        10vmax 10vmax,
+        -30vmax -10vmax,
+        50vmax 50vmax;
+    }
+    25%{
+    background-size:
+        70vmax 70vmax,
+        120vmax 120vmax,
+        70vmax 70vmax,
+        100vmax 100vmax,
+        80vmax 80vmax;
+    background-position:
+        -70vmax -70vmax,
+        70vmax -70vmax,
+        30vmax 30vmax,
+        -40vmax -10vmax,
+        40vmax 40vmax;
+    }
+    50%{
+        background-size:
+            110vmax 110vmax,
+            60vmax 60vmax,
+            900vmax 90vmax,
+            80vmax 80vmax,
+            60vmax 60vmax;
+        background-position:
+            -60vmax -60vmax,
+            60vmax -60vmax,
+            -50vmax -40vmax,
+            -40vmax -40vmax,
+            30vmax 30vmax;
+    }
+    75%{
+        background-size:
+            120vmax 120vmax,
+            70vmax 70vmax,
+            70vmax 70vmax,
+            100vmax 100vmax,
+            80vmax 80vmax;
+        background-position:
+            -70vmax -70vmax,
+            30vmax 30vmax,
+            -70vmax -70vmax,
+            40vmax 10vmax,
+            -40vmax -40vmax;
+    }
+}
+
+
+
+
+
+
 .container{
     position: absolute;     /*相对位置*/
     justify-content: center;/*在主轴（横轴）方向上居中对齐*/
@@ -45,7 +124,7 @@ body{
     align-items: center;
     border-top: rgba(255,255,255,0.5) 1px solid;/*设置上边框属性*/
     border-left: rgba(255,255,255,0.5) 1px solid;/*设置左边框属性*/
-    backdrop-filter: blur(3px);/*背景透明模糊*/
+    backdrop-filter: blur(7px);/*背景透明模糊*/
     
 }
 
@@ -137,6 +216,7 @@ body{
     border-top: rgba(255,255,255,0.5) 1px solid;/*设置上边框属性*/
     border-left: rgba(255,255,255,0.5) 1px solid;/*设置左边框属性*/
     backdrop-filter: blur(3px);/*背景透明模糊*/
+    
     transition: 0.15s;
 }
 

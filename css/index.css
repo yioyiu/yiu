@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     
 }
 
@@ -40,7 +39,7 @@ body{
         90vmax 90vmax,
         110vmax 110vmax,
         90vmax 90vmax;
-    background-position:
+        background-position:
         -80vmax -80vmax,
         60vmax -30vmax,
         10vmax 10vmax,
@@ -48,17 +47,17 @@ body{
         50vmax 50vmax;
     }
     25%{
-    background-size:
+        background-size:
+        90vmax 90vmax,
         70vmax 70vmax,
-        120vmax 120vmax,
-        70vmax 70vmax,
+        1000vmax 100vmax,
         100vmax 100vmax,
         80vmax 80vmax;
-    background-position:
+        background-position:
         -70vmax -70vmax,
-        70vmax -70vmax,
+        70vmax -40vmax,
         30vmax 30vmax,
-        -40vmax -10vmax,
+        -40vmax -20vmax,
         40vmax 40vmax;
     }
     50%{
@@ -77,17 +76,17 @@ body{
     }
     75%{
         background-size:
-            120vmax 120vmax,
-            70vmax 70vmax,
-            70vmax 70vmax,
-            100vmax 100vmax,
-            80vmax 80vmax;
+        90vmax 90vmax,
+        70vmax 70vmax,
+        1000vmax 100vmax,
+        100vmax 100vmax,
+        80vmax 80vmax;
         background-position:
-            -70vmax -70vmax,
-            30vmax 30vmax,
-            -70vmax -70vmax,
-            40vmax 10vmax,
-            -40vmax -40vmax;
+        -70vmax -70vmax,
+        70vmax -40vmax,
+        30vmax 30vmax,
+        -40vmax -20vmax,
+        40vmax 40vmax;
     }
 }
 
@@ -174,124 +173,4 @@ body{
 .container .card:hover .content h3{
     transform: translateY(-25px);
     opacity: 1;/*透明*/
-}
-
-
-
-
-
-
-
-
-
-
-
-
-                                                /* 右边导航栏 */
-
-.navbar,
-.navbar ul{
-    position: absolute;
-    right: 0;
-    justify-content: center;
-    align-items: center;
-}
-
-/* 白框框 */
-.navbar{
-    position: absolute;
-    padding: 10px;
-    border-radius: 50px;
-    background-color: white;
-    text-align: center;
-}
-.navbar ul{
-    position: relative;
-    width:0;
-    height: 8px;
-    /* height: 0; */
-    overflow: hidden;
-    /* 让文字都横向排版不是竖向 */
-    white-space: nowrap;
-    transition: all 0.25s;
-    margin: -5px;
-}
-/* ：checked当选中的复选框的时候，~是兄弟选择器  查找同一级的ul */
-.navbar input:checked ~ ul{
-    height: 350px;
-    width: 100px;
-}
-
-
-
-
-
-.navbar input{
-    position: relative;
-    left: auto;
-    right: auto;
-    width: 30px;
-    height:30px;
-    /* 鼠标变小手 */
-    cursor: pointer;
-    opacity: 0;
-}
-
-
-
-
-/* 灰杠杠 */
-.navbar span{
-    position: absolute;
-    right: 10px;
-    height: 5px;
-    width: 30px;
-    border-radius: 15px;
-    background-color: #999;
-    pointer-events: none;
-    transition: transform 0.1s ease-in-out, top 0.1s
-    ease-in-out 0.1s;
-}
-.navbar span:nth-child(3){/* 第二条灰线在navbar元素内第三个位置所以（3） */
-    top:calc(35px);
-}
-
-
-
-
-
-.navbar ul li{
-    margin: auto;
-    list-style: none;
-}
-.navbar ul li a{
-    text-decoration: none;
-    font-size:20px;
-    font-weight: 700;
-    color: #333;
-}
-.navbar ul li a:hover{
-    color:#fb7299;
-}
-
-
-
-
-
-/* 红叉叉 */
-.navbar input:checked~ span:nth-child(2){
-    top: calc(6%);
-    left: calc(35%);
-    transform:rotate(45deg);
-    background-color: #fb7299;
-    transition:top 0.1s ease-in-out, transform 0.1s
-    ease-in-out 0.1s;
-}
-.navbar input:checked~ span:nth-child(3){
-    top: calc(6%);
-    left: calc(35%);
-    transform:rotate(-45deg);
-    background-color:#fb7299;
-    transition:top 0.1s ease-in-out, transform 0.1s
-    ease-in-out 0.1s;
 }

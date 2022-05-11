@@ -1,63 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="discription" content="这里是ZYY的个人页面">
-    <!-- 网页logo -->
-    <link rel="Bookmark" href="images\logo.png" />
-    <link rel="shortcut icon" href="images\logo.ico" type="image/x-icon" />
-    <link rel="icon" href="images\logo.ico" type="image/x-icon" />
-    <!-- 网页标题 -->
-    <title>Yiu   丨   私人小窝</title>
-    <style>     
-    </style>
-    <link rel="stylesheet" href="css\index.css">
+    <title>personal</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="images/logo.ico">
 </head>
 
+<body>
+    <!-- 顶部粘性导航栏 -->
+    <header>
+        <nav>
+            <img src="images/logo.png" id="logo">
+            <ul id="menu">
+                <li>AAAA</li>
+                <li>BBBB</li>
+                <li>CCCC</li>
+                <li>DDDD</li>
+            </ul>
+        </nav>
+    </header>
 
 
-</body>
-                                <!-- 卡片 -->
-    <div class="container">
-        <div class="card">
-            <div class="content">
-                <h1>
-                    ZyuY
-                </h1>
-                <h2>
-                    周玉耀
-                </h2>
-                <h3>
-                    Ngor giu zou<br>
-                    <strong>Zhou Yio Yiu</strong>
-                </h3>
-                <h3>
-                    在嗓嘿流浪的广东银
-                </h3>
-                <h3>
-                    管院本科小小书生
-                </h3>
-                <h3>
-                   ACCAer 
-                </h3>
-                <h3>
-                    喜欢一切新事物并都想尝试一下
-                </h3>
-                <h3>
-                    拖延症晚期无药可治型患者
-                </h3>
-                <h3>
-                    浅浅<br>
-                    踢踢球 拍拍照 做做歌 剪剪视频 
-                </h3>
-                <h3>
-                    很高兴认识你
-                </h3>
-               
-            </div>
-        </div>
+
+    <!-- 滚轮视差背景图 -->
+    <section>
+        <img src="images\sky.png" id="sky">
+        <img src="images\mountain.png" id="mountain">
+        <img src="images\house.png" id="house">
+        <img src="images\tree.png" id="tree">
+        <h2 id="text">AAAA</h2>
+    </section>
+
+    <div id="div3">
+        <h2 class="text">Life is a chess-board The chess-board is the world: the pieces are the phenomena of the
+            universe;
+            the rules of the game are what we call the laws of nature. The player on the other side is hidden from us.
+            We
+            know that his play is always fair, just and patient. But also we know, to our cost, that he never overlooks
+            a
+            mistake, or makes the smallest allowance for ignorance.</h2>
     </div>
 
 
@@ -66,20 +51,36 @@
 
 
 
-<!-- 浮动js -->
-<script type="text/javascript" src="js\Floating card.js"></script>
-<script type="text/javascript">
-	VanillaTilt.init(document.querySelectorAll(".card"), {
-        reverse: true,
-		max: 50,
-		speed: 3000,
-        glare: false,
-        "max-glare": 0.2,
-	});
-</script>
+    <!-- 顶部粘性导航栏 -->
+    <script>
+        window.addEventListener('scroll',() =>{
+            let nav = document.querySelector('nav')
+            nav.classList.toggle('sticky',window.scrollY > 100)
+        })
+        window.addEventListener('scroll',() =>{
+            let logo = document.querySelector('img')
+            logo.classList.toggle('sticky',window.scrollY > 100)
+        })
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        // <!-- 滚轮视差效果实现 -->
+        let sky = document.getElementById("sky");
+        let mountain = document.getElementById("mountain");
+        let house = document.getElementById("house");
+        let text = document.getElementById("text");
+        window.addEventListener('scroll', function () {
+            var value = window.scrollY;
+            sky.style.top = value * 0.2 + 'px';
+            mountain.style.top = value * -0.01 + 'px';
+            house.style.top = value * -0.2 + 'px';
+            text.style.top = value * 0.3 + 'px';
+        })
+    </script>
 </body>
-
-
-
 
 </html>

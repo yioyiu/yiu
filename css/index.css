@@ -1,176 +1,185 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    
+    box-sizing: border-box;
 }
 
-
-body{
-    min-height: 100vh;
-    min-width: 100vh;
-    display: flex;/*生成一个flex的框*/
-    background-color: rgb(162, 59, 59);
-    background-image: 
-    radial-gradient(closest-side,rgb(255, 60, 60,1),rgba(235,205,78,0)),
-    radial-gradient(closest-side,rgb(143, 255, 151,1),rgba(235,205,78,0)),
-    radial-gradient(closest-side,rgb(135, 253, 247,1),rgba(235,205,78,0)),
-    radial-gradient(closest-side,rgb(135, 99, 255),rgba(235,205,78,0)),
-    radial-gradient(closest-side,rgb(255, 148, 148,1),rgba(235,205,78,0));
-    background-size:
-    130vmax 130vmax,
-    80vmax 80vmax,
-    90vmax 90vmax,
-    110vmax 110vmax,
-    90vmax 90vmax;
-    background-position:
-    -80vmax -80vmax,
-    60vmax -30vmax,
-    10vmax 10vmax,
-    -30vmax -10vmax,
-    50vmax 50vmax;
-    background-repeat: no-repeat;
-    animation: 15s bgmove linear infinite;
-}
-@keyframes bgmove{
-    0%,100%{
-        background-size:
-        130vmax 130vmax,
-        80vmax 80vmax,
-        90vmax 90vmax,
-        110vmax 110vmax,
-        90vmax 90vmax;
-        background-position:
-        -80vmax -80vmax,
-        60vmax -30vmax,
-        10vmax 10vmax,
-        -30vmax -10vmax,
-        50vmax 50vmax;
-    }
-    25%{
-        background-size:
-        90vmax 90vmax,
-        70vmax 70vmax,
-        1000vmax 100vmax,
-        100vmax 100vmax,
-        80vmax 80vmax;
-        background-position:
-        -70vmax -70vmax,
-        70vmax -40vmax,
-        30vmax 30vmax,
-        -40vmax -20vmax,
-        40vmax 40vmax;
-    }
-    50%{
-        background-size:
-            110vmax 110vmax,
-            60vmax 60vmax,
-            900vmax 90vmax,
-            80vmax 80vmax,
-            60vmax 60vmax;
-        background-position:
-            -60vmax -60vmax,
-            60vmax -60vmax,
-            -50vmax -40vmax,
-            -40vmax -40vmax,
-            30vmax 30vmax;
-    }
-    75%{
-        background-size:
-        90vmax 90vmax,
-        70vmax 70vmax,
-        1000vmax 100vmax,
-        100vmax 100vmax,
-        80vmax 80vmax;
-        background-position:
-        -70vmax -70vmax,
-        70vmax -40vmax,
-        30vmax 30vmax,
-        -40vmax -20vmax,
-        40vmax 40vmax;
-    }
+body {
+    min-height: 200vh;
+    background: #554377;
 }
 
-
-
-
-
-
-.container{
-    position: relative;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    max-width: 1200px;
-    flex-wrap: wrap;        /*灵活的项目在必要的时候拆行或拆列*/
-    z-index:1;             /*图层上移一层*/
-}                
-.container .card{
+/* 顶部导航栏 */
+nav {
+    overflow-x: hidden;
+    position: absolute;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 99;
+    transition: 0.8s;
     justify-content: center;
     align-items: center;
-    width: 250px;
-    height: 350px;
-    margin:30px;/*外边框大小）*/
-    padding:10px 5px 15px;/*内边框大小*/
-    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);/*下拉阴影*/
-    border-radius: 15px;/*圆角*/
-    overflow:hidden;/*内容溢出卡片会怎样*/
+    transform: 0.8s;
+}
+
+nav.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
-    background-color:rgba(255,255,255,0.1);
-    border-top: rgba(255,255,255,0.5) 1px solid;/*设置上边框属性*/
-    border-left: rgba(255,255,255,0.5) 1px solid;/*设置左边框属性*/
-    backdrop-filter: blur(7px);/*背景透明模糊*/
-    
-    
+    background: #55437700;
+    transition: 0.8s;
 }
 
 
 
-.container .card .content{
-    color: white;
-    padding: 20px 10px 20px 10px;
+
+
+
+nav ul {
+    position: relative;
+    background: #9d68ffb5;
+    border-radius: 15px;
+    width: auto;
 }
 
-.container .card .content h1{
-    position:absolute;
-    top: -30px;
-    left: 10px;
-    font-size: 9em;
-    color: rgba(255,255,255,0.3);
+nav.sticky ul {
+    height: auto;
+    background: #9d68ffb5;
+    overflow-y: hidden;
+}
+
+
+
+
+
+
+
+
+#logo {
+    position: relative;
+    width: 6.5vw;
+    cursor: pointer;
+    transform: 0.8s;
+}
+
+img#logo.sticky {
+    display: none;
+}
+
+
+
+
+
+
+
+nav ul li {
+    display: inline-block;
+    font-weight: bolder;
+    list-style: none;
+
+    margin: 10px 30px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5vw;
+}
+
+nav.sticky ul li {
+    transform: 0.8s;
+}
+
+
+
+
+
+
+
+
+
+
+/* 滚轮视差背景设置 */
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to top, #554377, transparent);
+    z-index: 2;
+}
+
+section:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #554377;
+    mix-blend-mode: color;
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
     pointer-events: none;
 }
 
-
-.container .card .content h2{
-    font-size: 3em;
-    font-weight: 400;
-    text-align: center;
-    transition: 0.5s;
-    transform: translateY(160px);
-    opacity: 1;/*透明程度*/
+#tree {
+    z-index: 1;
 }
-/*hover：鼠标放上去后发生以下事情*/
-.container .card:hover .content h2{
-    transform: translateY(0px);
-    opacity: 0;/*透明*/
+
+#text {
+    display: inline;
+    top: 0;
+    padding-top: 21vw;
+    position: absolute;
+    color: #fff;
+    font-size: 20vw;
 }
 
 
 
 
-.container .card .content h3{
-    margin-bottom: 15px;
-    font-size: 15px;
-    font-weight: 500;
+
+
+
+
+
+/* ------------------------- */
+#div3 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
     justify-content: center;
-    text-align: center;
-    transition: 0.5s;
-    transform: translateY(50px);
-    opacity: 0;/*不透明*/
+    align-items: center;
 }
-/*hover：鼠标放上去后发生以下事情*/
-.container .card:hover .content h3{
-    transform: translateY(-25px);
-    opacity: 1;/*透明*/
+
+#div3 h2 {
+    color: white;
+    padding: 10px 20px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 60%;
+    background-color: #00000022;
+    border-radius: 25px;
+
 }

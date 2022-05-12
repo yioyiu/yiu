@@ -53,13 +53,13 @@
 
     <!-- 顶部粘性导航栏 -->
     <script>
-        window.addEventListener('scroll',() =>{
+        window.addEventListener('scroll', () => {
             let nav = document.querySelector('nav')
-            nav.classList.toggle('sticky',window.scrollY > 100)
+            nav.classList.toggle('sticky', window.scrollY > 100)
         })
-        window.addEventListener('scroll',() =>{
+        window.addEventListener('scroll', () => {
             let logo = document.querySelector('img')
-            logo.classList.toggle('sticky',window.scrollY > 100)
+            logo.classList.toggle('sticky', window.scrollY > 100)
         })
     </script>
 
@@ -69,16 +69,14 @@
 
     <script type="text/javascript">
         // <!-- 滚轮视差效果实现 -->
-        let sky = document.getElementById("sky");
         let mountain = document.getElementById("mountain");
         let house = document.getElementById("house");
         let text = document.getElementById("text");
         window.addEventListener('scroll', function () {
             var value = window.scrollY;
-            sky.style.top = value * 0.2 + 'px';
             mountain.style.top = value * -0.01 + 'px';
             house.style.top = value * -0.2 + 'px';
-            text.style.top = value * 0.3 + 'px';
+            text.style.top = value * 0.2 + 'px';
         })
     </script>
 </body>

@@ -147,10 +147,10 @@ section img {
     animation: animate 1s linear infinite;
     display: inline;
     top: 0;
-    padding-top: 33vw;
+    padding-top: 28vw;
     position: absolute;
     color: #ffffff;
-    font-size: 10vw;
+    font-size: 15vw;
 }
 @keyframes animate {
     0%,100%{

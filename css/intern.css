@@ -136,7 +136,7 @@ section img {
 }
 #treeL {
     z-index: 0;
-    filter: alpha(opacity=50);
+    
 }
 #tree {
     z-index: 1;
@@ -148,10 +148,10 @@ section img {
     animation: animate 1s linear infinite;
     display: inline;
     top: 0;
-    padding-top: 33vw;
+    padding-top: 30vw;
     position: absolute;
     color: #ffffff;
-    font-size: 10vw;
+    font-size: 13vw;
 }
 @keyframes animate {
     0%,100%{

@@ -32,7 +32,7 @@
         <img src="images\mountain.png" id="mountain">
         <img src="images\house.png" id="house">
         <img src="images\tree.png" id="tree">
-        <h2 id="text">周玉耀</h2>
+        <h2 id="bigtitle">Yiu</h2>
     </section>
 
     <div id="div3">
@@ -71,12 +71,12 @@
         // <!-- 滚轮视差效果实现 -->
         let mountain = document.getElementById("mountain");
         let house = document.getElementById("house");
-        let text = document.getElementById("text");
+        let text = document.getElementById("bigtitle");
         window.addEventListener('scroll', function () {
             var value = window.scrollY;
-            mountain.style.top = value * -0.01 + 'px';
+            mountain.style.top = value * -0.02 + 'px';
             house.style.top = value * -0.2 + 'px';
-            text.style.top = value * 0.4 + 'px';
+            bigtitle.style.top = value * 0.3 + 'px';
         })
     </script>
 </body>

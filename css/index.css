@@ -32,11 +32,6 @@ nav.sticky {
     transition: 0.8s;
 }
 
-
-
-
-
-
 nav ul {
     position: relative;
     background: #9d68ffb5;
@@ -51,12 +46,6 @@ nav.sticky ul {
 }
 
 
-
-
-
-
-
-
 #logo {
     position: relative;
     width: 10.5vw;
@@ -67,11 +56,6 @@ nav.sticky ul {
 img#logo.sticky {
     display: none;
 }
-
-
-
-
-
 
 
 nav ul li {
@@ -142,18 +126,34 @@ section img {
 #tree {
     z-index: 1;
 }
-
-#text {
+/*大字的闪光灯效果*/
+#bigtitle {
+    font-family: fira code;
+    filter: blur(2px);
+    animation: animate 1s linear infinite;
     display: inline;
     top: 0;
-    padding-top: 21vw;
+    padding-top: 23vw;
     position: absolute;
-    color: #fff;
+    color: #ffffff;
     font-size: 20vw;
 }
-
-
-
+@keyframes animate {
+    0%,100%{
+        color: #554377;
+        filter: blur(2px);
+        text-shadow: 0 0 10px#f7f7f7,
+        0 0 20px#f7f7f7,
+        0 0 50px#f7f7f7,
+        0 0 1000px#f7f7f7,
+        0 0 200px#f7f7f7,
+        0 0 300px#f7f7f7;
+    }
+    30%,100%{
+        color: #f9f9f9;
+        filter: blur(0px);
+    }
+}
 
 
 
@@ -172,7 +172,7 @@ section img {
 }
 
 #div3 h2 {
-    color: white;
+    color: rgb(255, 254, 255);
     padding: 10px 20px;
     overflow: hidden;
     justify-content: center;

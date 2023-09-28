@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 200vh;
+    background: #554377;
+}
+
+/* 顶部导航栏 */
+nav {
+    overflow-x: hidden;
+    position: absolute;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 99;
+    transition: 0.8s;
+    justify-content: center;
+    align-items: center;
+    transform: 0.8s;
+}
+
+nav.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    background: #55437700;
+    transition: 0.8s;
+}
+
+nav ul {
+    position: relative;
+    background: #9d68ffb5;
+    border-radius: 15px;
+    width: auto;
+}
+
+nav.sticky ul {
+    height: auto;
+    background: #9d68ffb5;
+    overflow-y: hidden;
+}
+
+
+#logo {
+    position: relative;
+    width: 10.5vw;
+    cursor: pointer;
+    transform: 0.8s;
+}
+
+img#logo.sticky {
+    display: none;
+}
+
+
+nav ul li {
+    display: inline-block;
+    font-weight: bolder;
+    list-style: none;
+
+    margin: 10px 30px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5vw;
+}
+
+nav.sticky ul li {
+    transform: 0.8s;
+}
+
+
+
+
+
+
+
+
+
+
+/* 滚轮视差背景设置 */
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to top, #554377, transparent);
+    z-index: 2;
+}
+
+section:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #554377;
+    mix-blend-mode: color;
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#tree {
+    z-index: 1;
+}
+/*大字的闪光灯效果*/
+#bigtitle {
+    font-family: fira code;
+    filter: blur(2px);
+    animation: animate 1s linear infinite;
+    display: inline;
+    top: 0;
+    padding-top: 23vw;
+    position: absolute;
+    color: #ffffff;
+    font-size: 20vw;
+}
+@keyframes animate {
+    0%,100%{
+        color: #554377;
+        filter: blur(2px);
+        text-shadow: 0 0 10px#f7f7f7,
+        0 0 20px#f7f7f7,
+        0 0 50px#f7f7f7,
+        0 0 1000px#f7f7f7,
+        0 0 200px#f7f7f7,
+        0 0 300px#f7f7f7;
+    }
+    30%,100%{
+        color: #f9f9f9;
+        filter: blur(0px);
+    }
+}
+
+
+
+
+
+
+/* ------------------------- */
+#div3 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#div3 h2 {
+    color: rgb(255, 254, 255);
+    padding: 10px 20px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 60%;
+    background-color: #00000022;
+    border-radius: 25px;
+
+}

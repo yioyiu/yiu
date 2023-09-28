@@ -59,10 +59,10 @@ img#logo.sticky {
 
 
 nav ul a {
-    text-decoration: none;
     display: inline-block;
     font-weight: bolder;
     list-style: none;
+    text-decoration: none;
     margin: 10px 30px;
     color: #fff;
     cursor: pointer;
@@ -123,8 +123,6 @@ section img {
     object-fit: cover;
     pointer-events: none;
 }
-
-
 #sky {
     z-index:-1;
 }
@@ -136,7 +134,6 @@ section img {
 }
 #treeL {
     z-index: 0;
-    filter: alpha(opacity=50);
 }
 #tree {
     z-index: 1;
@@ -148,10 +145,10 @@ section img {
     animation: animate 1s linear infinite;
     display: inline;
     top: 0;
-    padding-top: 33vw;
+    padding-top: 23vw;
     position: absolute;
     color: #ffffff;
-    font-size: 10vw;
+    font-size: 20vw;
 }
 @keyframes animate {
     0%,100%{

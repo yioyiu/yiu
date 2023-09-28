@@ -175,7 +175,8 @@ section img {
 
 
 
-/* ------------------------- */
+/* 页面内容 */
+/* 框 */
 #div3 {
     position: relative;
     width: 100%;
@@ -185,16 +186,48 @@ section img {
     justify-content: center;
     align-items: center;
 }
-
-#div3 h2 {
-    color: rgb(255, 254, 255);
-    padding: 10px 20px;
+/* 内容 */
+#div31 h1 {
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
     overflow: hidden;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    width: 60%;
+    position: relative;
+    /* width: 50%; */
     background-color: #00000022;
     border-radius: 25px;
-
+}
+#div31 h2 {
+    color: rgb(255, 254, 255);
+    padding: 15px 15px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* width: 50%; */
+    background-color: #00000022;
+    border-radius: 25px;
+}
+#div32 h1 {
+    color: rgb(9, 6, 6);
+    padding: 10px 15px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* width: 50%; */
+    background-color: #00000022;
+    border-radius: 25px;
+}
+#div32 h2 {
+    color: rgb(9, 5, 9);
+    padding: 15px 15px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 50%;
+    background-color: #00000022;
+    border-radius: 25px;
 }

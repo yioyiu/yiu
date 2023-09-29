@@ -143,7 +143,7 @@ section img {
 /*大字的闪光灯效果*/
 #bigtitle {
     font-family: fira code;
-    filter: blur(2px);
+    filter: blur(1px);
     animation: animate 1s linear infinite;
     display: inline;
     top: 0;
@@ -152,48 +152,66 @@ section img {
     color: #ffffff;
     font-size: 15vw;
 }
-@keyframes animate {
-    0%,100%{
-        color: #554377;
-        filter: blur(2px);
-        text-shadow: 0 0 10px#f7f7f7,
-        0 0 20px#f7f7f7,
-        0 0 50px#f7f7f7,
-        0 0 1000px#f7f7f7,
-        0 0 200px#f7f7f7,
-        0 0 300px#f7f7f7;
-    }
-    30%,100%{
-        color: #8069fe;
-        filter: blur(0px);
-    }
-}
-
 
 
 
 
 /* 页面内容 */
-/* 框 */
-#div3 {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-}
-/* 内容 */
-#div3 h2 {
-    color: rgb(255, 254, 255);
-    padding: 15px 20px;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 50%;
-    background-color: #00000022;
-    border-radius: 25px;
+/* 定义整个播放器的样式 */
+.player {
+    z-index: 99;
+    position: fixed;
+    left: 0%;
+    bottom: 50%;
+    height: 155px; /* 高度 */
+    width: 350px; /* 宽度 */
+    border-radius: 25px; /* 边框半径为10px */
 
+    /* 定义播放器的背景颜色 */
+    background: linear-gradient(to bottom, #340bff60, #ff9d004f);
+    background-color: rgba(148, 91, 255, 0.411); /* 背景颜色*/
+}
+ 
+/* 定义封面的样式 */
+.player .cover {
+    display: inline-block; /* 内部元素呈现为块级元素 */
+    overflow: hidden; /* 溢出部分隐藏 */
+    border-radius: 25px; /* 边框半径为10px */
+    width: 100%;
+}
+
+.cover img{
+    width: 30%;
+    height: 30%;
+}
+ 
+/* 隐藏滚动条 */
+div::-webkit-scrollbar {
+    display: none;
+}
+ 
+
+/* 定义h2标签 */
+.song h2 {
+    font-family: "楷体";
+}
+ 
+/* 设置音频样式 */
+audio {
+    width: 100%; /* 宽度为100% */
+    height: 20px; /* 高度为50px */
+    border-radius: 10px; /* 边框半径为10px */
+}
+ 
+/* 设置音频播放进度条的颜色 */
+audio::-webkit-media-controls-progress-bar {
+    background-color: #000;
+}
+ 
+
+
+ 
+/* 隐藏音频播放器的背景颜色 */
+audio::-webkit-media-controls-enclosure {
+    background-color: rgba(216, 218, 221, 0.0);
 }

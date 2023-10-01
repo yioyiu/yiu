@@ -193,6 +193,8 @@ div::-webkit-scrollbar {
 
 /* 定义h2标签 */
 .song h2 {
+    position: absolute;
+    font-size: 10px;
     font-family: "楷体";
 }
  

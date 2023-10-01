@@ -166,14 +166,14 @@ section img {
     z-index: 99;
     position: fixed;
     left: 0%;
-    bottom: 50%;
+    bottom: 65.4%;
     height: 155px; /* 高度 */
-    width: 350px; /* 宽度 */
+    width: 300px; /* 宽度 */
     border-radius: 25px; /* 边框半径为10px */
 
     /* 定义播放器的背景颜色 */
-    background: linear-gradient(to bottom, #340bff60, #ff9d004f);
-    background-color: rgba(148, 91, 255, 0.411); /* 背景颜色*/
+    background: linear-gradient(to bottom, #340bff7d, #ff9d0012);
+    background-color: rgba(255, 91, 91, 0.411); /* 背景颜色*/
 }
  
 /* 定义封面的样式 */
@@ -185,8 +185,7 @@ section img {
 }
 
 .cover img{
-    width: 30%;
-    height: 30%;
+    width: 40%;
 }
  
 /* 隐藏滚动条 */
@@ -196,7 +195,8 @@ div::-webkit-scrollbar {
  
 
 /* 定义h2标签 */
-.song h2 {
+.cover h2 {
+    width: auto;
     position: absolute;
     font-size: 10px;
     font-family: "楷体";

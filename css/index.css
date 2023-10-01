@@ -69,7 +69,7 @@ nav ul a {
     list-style: none;
     text-decoration: none;
     margin: 10px 30px;
-    color: #fff;
+    color: #ffffffac;
     cursor: pointer;
     font-size: 1.5vw;
 }
@@ -78,7 +78,10 @@ nav.sticky ul a {
     text-decoration: none;
     transform: 0.8s;
 }
-
+#about{
+    font-size: 2vw;
+    color: #ffffff;
+}
 
 
 
@@ -194,12 +197,17 @@ section img {
 #img3{
     position: absolute;
     right: 5%;
-    top: 50%;
+    top: 35%;
 }
 #img4{
     position: absolute;
     right: 5%;
     top: 100%;
+}
+#img5{
+    position: absolute;
+    left: 5%;
+    top: 110%;
 }
 /* 内容 */
 #div3 h2 {

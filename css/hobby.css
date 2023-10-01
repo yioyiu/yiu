@@ -64,7 +64,7 @@ nav ul a {
     font-weight: bolder;
     list-style: none;
     margin: 10px 30px;
-    color: #fff;
+    color: #ffffffac;
     cursor: pointer;
     font-size: 1.5vw;
 }
@@ -74,6 +74,10 @@ nav.sticky ul a {
     transform: 0.8s;
 }
 
+#hobby{
+    font-size: 2vw;
+    color: #ffffff;
+}
 
 
 

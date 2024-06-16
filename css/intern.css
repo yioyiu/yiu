@@ -150,17 +150,18 @@ section img {
 
 
 
-
+/*Work experence*/
 #bigtitle {
     top: 0;
-    padding-top: 30vw;
+    padding-top: 10vw;
     position: absolute;
     color: #ffffff;
     font-size: 13vw;
-    filter: blur(1px);
+    /* filter: blur(1px); */
     display: inline;
     font-family: fira code;
     animation: animate 1s linear infinite;
+    z-index: 2;
 }
 /*大字的闪光灯效果*/
 /* @keyframes animate {
@@ -187,7 +188,7 @@ section img {
 /* -------------------------页面元素----------------------- */
 
 /* 第一段 */
-#div3 {
+div {
     width: 90%;height: 100%;margin: 5%;
     /* border:1px solid rgb(0, 0, 0); */
 
@@ -198,7 +199,7 @@ section img {
     align-items: center;
 }
 /* 内容 */
-#div3 h1 {
+div h1 {
     /* border:1px solid rgb(2, 178, 254); */
 
 
@@ -208,58 +209,19 @@ section img {
     color: rgb(255, 255, 255);
     overflow: hidden;
     position: relative;
-    width: 50%;
+    width: 40%;
 }
-#div3 h2 {
+div h2 {
     /* border:1px solid rgb(2, 254, 48); */
 
 
     color: rgb(255, 254, 255);
-    font-size: 1vw;
+    font-size: 1.5vw;
     margin: 0px 0px 0px 2%;
     padding: 15px 15px;
     overflow: hidden;
     position: relative;
-    width: 50%;
+    width: 60%;
     background-color: #00000022;
     border-radius: 25px;
 }
-
-
-
-
-/* 第二段 */
-#div4 {
-    width: 90%;height: 100%;margin: 5%;
-    /* border:1px solid rgb(0, 0, 0); */
-
-
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-}
-#div4 h1 {
-    text-align: center;
-    /* border:1px solid rgb(2, 178, 254); */
-    color: rgb(250, 247, 247);
-    font-size: 2vw;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 50%;
-}
-#div4 h2 {
-    /* border:1px solid rgb(2, 254, 48); */
-    color: rgb(255, 255, 255);
-    font-size: 1vw;
-    margin: 0px 2% 0px 0px;
-    padding: 15px 15px;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: auto;
-    background-color: #00000022;
-    border-radius: 25px;
-} 

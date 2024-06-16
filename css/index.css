@@ -113,7 +113,6 @@ section:before {
 }
 
 
-
 section img {
     position: absolute;
     top: 0;
@@ -140,14 +139,15 @@ section img {
 /*大字的闪光灯效果*/
 #bigtitle {
     font-family: fira code;
-    filter: blur(1px);
+    /* filter: blur(1px); */
     animation: animate 1s linear infinite;
     display: inline;
     top: 0;
-    padding-top: 23vw;
+    padding-top: 8vw;
     position: absolute;
     color: #ffffff;
-    font-size: 20vw;
+    font-size: 15vw;
+    z-index: 2;
 }
 /* 发光 */
 /* @keyframes animate {
@@ -222,3 +222,34 @@ section img {
     font-size: 2vw;
 
 }
+
+
+
+
+ 
+/* 定义封面的样式 */
+.player .cover {
+    display: inline-block; /* 内部元素呈现为块级元素 */
+    overflow: hidden; /* 溢出部分隐藏 */
+    border-radius: 25px; /* 边框半径为10px */
+    width: 100%;
+}
+
+.cover img{
+    width: 40%;
+}
+ 
+/* 隐藏滚动条 */
+div::-webkit-scrollbar {
+    display: none;
+}
+ 
+
+/* 定义h2标签 */
+.cover h2 {
+    width: auto;
+    position: absolute;
+    font-size: 10px;
+    font-family: "楷体";
+}
+ 

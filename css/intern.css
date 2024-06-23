@@ -162,6 +162,7 @@ section img {
     font-family: fira code;
     animation: animate 1s linear infinite;
     z-index: 2;
+    text-shadow: 1px 0 70px#7e0089
 }
 /*大字的闪光灯效果*/
 /* @keyframes animate {

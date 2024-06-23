@@ -142,15 +142,19 @@ section img {
     /* filter: blur(1px); */
     animation: animate 1s linear infinite;
     display: inline;
-    top: 0;
+    top: 5%;
+    left: 0;
     padding-top: 8vw;
     position: absolute;
-    color: #ffffff;
-    font-size: 15vw;
+    color:#ffffff;
+    font-size: 13vw;
     z-index: 2;
+    text-shadow: 1px 0 70px#7e0089
 }
+
+
 /* 发光 */
-/* @keyframes animate {
+ /* @keyframes animate {
     0%,100%{
         color: #554377;
         filter: blur(2px);
@@ -165,7 +169,7 @@ section img {
         color: #8069fe;
         filter: blur(0px);
     }
-} */
+}  */
 
 
 
